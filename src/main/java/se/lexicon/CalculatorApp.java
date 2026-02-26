@@ -56,6 +56,15 @@ public class CalculatorApp {
                 default:
                     System.out.println("Invalid operator, valid operators +, -, *, /");
             }
+
+            System.out.println("More calculation? (y/n)");
+            String myChoice = myScanner.next();
+
+            if (myChoice == null || !myChoice.equalsIgnoreCase("y") || myChoice.isBlank()){
+                continueCalculation = false;
+            }
+
         }
+        System.out.println("-----------Calculator closed.-----------");
     }
 }
