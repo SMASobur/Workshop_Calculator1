@@ -17,7 +17,7 @@ public class CalculatorApp {
             System.out.println("Enter first number:");
             double num1 = myScanner.nextDouble();
 
-            System.out.println("Enter operator (+, -, *, /):");
+            System.out.println("Enter an operator (+, -, *, /):");
             char operator = myScanner.next().charAt(0);
 
             System.out.println("Enter second number:");
@@ -25,6 +25,33 @@ public class CalculatorApp {
 
 
             System.out.println("Given task is: "+ num1+ " "+ operator + " "+ num2);
+
+            double result;
+
+            switch (operator) {
+                case '+':
+                    result = num1 + num2;
+                    System.out.println("Result: " + result);
+                    break;
+
+                case '-':
+                    result = num1 - num2;
+                    System.out.println("Result: " + result);
+                    break;
+
+                case '*':
+                    result = num1 * num2;
+                    System.out.println("Result: " + result);
+                    break;
+
+                case '/':
+                    result = num1 / num2;
+                    System.out.println("Result: " + result);
+                    break;
+
+                default:
+                    System.out.println("Invalid operator, valid operators +, -, *, /");
+            }
         }
     }
 }
